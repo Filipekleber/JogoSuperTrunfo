@@ -6,7 +6,7 @@ int main(){
 char estado;
 char idCidade[5];
 char nomeCidade[50];
-int populacao;
+int populacao; 
 double area;
 double pib;
 int pontosTuristicos;
@@ -57,7 +57,7 @@ scanf(" %lf", &pib);
 
 
 printf("Quantos pontos turisticos sua cidade tem?");
-scanf(" %d", &pontosTuristicos);
+scanf(" %d\n\n", &pontosTuristicos);
 
 double densidadePopulacional = populacao / area;
 double pibPerCapita = pib / populacao;
@@ -92,7 +92,7 @@ scanf(" %lf", &pib02);
 
 
 printf("Quantos pontos turisticos sua cidade tem?");
-scanf(" %d", &pontosTuristicos02);
+scanf(" %d\n\n", &pontosTuristicos02);
 
 double densidadePopulacional02 = populacao02 / area02;
 double pibPerCapita02 = pib02 / populacao02;
@@ -126,18 +126,113 @@ printf("O pib per capita da cidade: %s e de: %.2f\n\n", nomeCidade02, pibPerCapi
 //----------------------------------------------------------------------------------------------------------------------------
 
 //Comparação da densidade populacional.
-printf("*Vamos para as comparacoes*\n");
+// printf("*Vamos para as comparacoes*\n");
 
-printf("Densidade populacional da primeira cidade: %.2f\n", densidadePopulacional);
-printf("Densidade populacional da segunda cidade: %.2f\n", densidadePopulacional02);
+// printf("Densidade populacional da primeira cidade: %.2f\n", densidadePopulacional);
+// printf("Densidade populacional da segunda cidade: %.2f\n", densidadePopulacional02);
 
-if (densidadePopulacional < densidadePopulacional02) {
-    printf("A primeira carta venceu!\n");
-} else if (densidadePopulacional > densidadePopulacional02) {
-    printf("A segunda carta venceu!\n");
-} else {
-    printf("Empate!\n");
+//-------------------------------------------------------------------------------------------------------------------------------
+
+//comparação para saber qual carta foi a vencedora, com o atributo (população)
+// if (populacao > populacao02){
+//     printf("A carta número 01 venceu!! Com a maior população!!\n");
+// }else if(populacao < populacao02){
+//     printf("A carta número 02 venceu!! Com a maior população!!\n");
+// }else{
+//     printf("Houve um empate\n");
+// }
+
+// comparação com o atributo densidade populacional.
+// if (densidadePopulacional > densidadePopulacional02){
+//     printf("A carta número 01 venceu!!\n");
+// }else if(densidadePopulacional < densidadePopulacional02){
+//     printf("A carta número 02 venceu!!\n");
+// }else{
+//     printf("Houve um empate\n");
+// }
+
+//Aqui vai ser aonde o jogador vai escolher o atributo a ser escolhido
+int opcaoJogador;
+
+printf("Escolha o atributo para poder compararmos\n");
+printf("1. Nome da cidade\n");
+printf("2. populacao\n");
+printf("3. Área\n");
+printf("4. PIB\n");
+printf("5. Número de pontos turísticos \n");
+printf("6. Densidade demográfica \n");
+scanf(" %d", &opcaoJogador);
+
+switch (opcaoJogador)
+{
+case 1:
+    printf(" %s %s",nomeCidade, nomeCidade02);
+    break;
+
+case 2:
+
+if (populacao > populacao02){
+    printf("A carta número 01 ganhou!\n");
+}else if (populacao < populacao02){
+    printf("A carta numero 02 ganhou!\n");
+}else{
+    printf("Houve um empate\n");
 }
+break;
+
+case 3:
+if (area > area02){
+    printf("A carta numero 01 ganhou!\n");
+}else if (area < area02){
+    printf("A carta numero 02 ganhou!\n");
+}else{
+    printf("Houve um empate\n");
+}
+break;
+
+case 4:
+
+if(pib > pib02){
+    printf("A carta numero 01 ganhou!\n");
+}else if (pib < pib02){
+    printf("A carta numero 02 ganhou!\n");
+}else{
+    printf("Houve um empate\n");
+}
+break;
+
+case 5:
+
+if (pontosTuristicos > pontosTuristicos02){
+    printf("A carta numero 01 ganhou!\n");
+}else if(pontosTuristicos < pontosTuristicos02){
+    printf("A carta numero 02 ganhou!\n");
+}else{
+    printf("Houve um empate\n");
+}
+break;
+
+case 6:
+
+if (densidadePopulacional > densidadePopulacional02){
+    printf("A carta numero 01 ganhou!\n");
+}else if(densidadePopulacional < densidadePopulacional02){
+    printf("A carta numero 02 ganhou!\n");
+}else{
+    printf("Houve um empate\n");
+}
+break;
+
+default:
+    printf("Opcao invalida");
+    break;
+}
+
+
+
+printf("Fim de jogo!\n");
+
+
 
 return 0;
 
