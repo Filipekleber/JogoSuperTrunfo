@@ -124,34 +124,9 @@ printf("A densidade populacional da cidade: %s e de: %.2f\n", nomeCidade02, dens
 printf("O pib per capita da cidade: %s e de: %.2f\n\n", nomeCidade02, pibPerCapita02);
 
 //----------------------------------------------------------------------------------------------------------------------------
+printf("*Vamos para as comparacoes*\n\n");
 
-//Comparação da densidade populacional.
-// printf("*Vamos para as comparacoes*\n");
-
-// printf("Densidade populacional da primeira cidade: %.2f\n", densidadePopulacional);
-// printf("Densidade populacional da segunda cidade: %.2f\n", densidadePopulacional02);
-
-//-------------------------------------------------------------------------------------------------------------------------------
-
-//comparação para saber qual carta foi a vencedora, com o atributo (população)
-// if (populacao > populacao02){
-//     printf("A carta número 01 venceu!! Com a maior população!!\n");
-// }else if(populacao < populacao02){
-//     printf("A carta número 02 venceu!! Com a maior população!!\n");
-// }else{
-//     printf("Houve um empate\n");
-// }
-
-// comparação com o atributo densidade populacional.
-// if (densidadePopulacional > densidadePopulacional02){
-//     printf("A carta número 01 venceu!!\n");
-// }else if(densidadePopulacional < densidadePopulacional02){
-//     printf("A carta número 02 venceu!!\n");
-// }else{
-//     printf("Houve um empate\n");
-// }
-
-//Aqui vai ser aonde o jogador vai escolher o atributo a ser escolhido
+//Aqui vai ser aonde o jogador vai escolher o atributo a ser comparado
 int opcaoJogador;
 
 printf("Escolha o atributo para poder compararmos\n");
